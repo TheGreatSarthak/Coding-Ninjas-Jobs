@@ -25,17 +25,21 @@ const JobCard = ({ job }) => {
         {/* job details */}
         <div className="flex flex-col my-4 mx-2">
           <div className="flex flex-row items-center">
-            <div className="text-gray-900 font-semibold">{job.title}</div>
+            <div className="text-gray-900 font-semibold max-[500px]:text-sm">
+              {job.title}
+            </div>
             <div
-              className={`text-xs text-white ${
+              className={`text-xs max-[500px]:text-[8px] text-white ${
                 job.eligibility === "Eligible" ? "bg-blue-900" : "bg-red-500"
               }  rounded-sm py-1 px-2 mx-3`}
             >
               {job.eligibility}
             </div>
           </div>
-          <div className="flex text-gray-500 text-xs my-1">{job.company}</div>
-          <div className="flex flex-row text-sm text-gray-700 items-center">
+          <div className="flex text-gray-500 text-xs max-[500px]:text-[10px] my-1">
+            {job.company}
+          </div>
+          <div className="flex flex-row text-sm max-[500px]:text-xs text-gray-700 items-center">
             <div className="flex items-center mr-4">
               <div className="mr-1">
                 <SlLocationPin />
@@ -56,10 +60,10 @@ const JobCard = ({ job }) => {
             </div>
           </div>
           {/* job skills */}
-          <div className="flex flex-row text-sm font-semibold">
+          <div className="flex flex-row text-sm max-[500px]:text-xs font-semibold">
             {job.skills.map((skill, index) => (
               <div
-                className="rounded-sm mr-2 px-2 py-1 my-4"
+                className="rounded-sm mr-2 px-2 py-1 my-4 max-[500px]:mb-1"
                 style={{
                   backgroundColor:
                     customColors[index % customColors.length].backgroundColor,
@@ -77,7 +81,7 @@ const JobCard = ({ job }) => {
         <div className="max-lg:hidden">
           Application Deadline - {job.application_deadline}
         </div>
-        <div className="flex lg:justify-end max-lg:w-full">
+        <div className="flex lg:justify-end max-lg:w-full max-[500px]:text-sm">
           <button className="text-orange-500 py-1 px-3 max-lg:w-full border-2 border-orange-500 rounded-md">
             VIEW DETAILS
           </button>
