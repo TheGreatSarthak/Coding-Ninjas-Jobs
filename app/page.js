@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         {/* filter button */}
         <div className="flex w-full border-gray-300 border-b">
-          <button className="flex flex-row items-center text-sm text-orange-500 py-1 px-3 border-2 border-orange-500 rounded-md mt-2 mb-4">
+          <button className="flex flex-row items-center text-sm text-orange-500 py-1 px-3 border-2 border-orange-500 rounded-md mt-2 mb-4 hover:bg-orange-500 hover:text-white">
             <div className="mr-1">
               <MdFilterListAlt size={20} />
             </div>

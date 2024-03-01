@@ -84,7 +84,7 @@ const JobCard = ({ job }) => {
           Application Deadline - {job.application_deadline}
         </div>
         <div className="flex lg:justify-end max-lg:w-full max-[500px]:text-sm">
-          <button className="text-orange-500 py-1 px-3 max-lg:w-full border-2 border-orange-500 rounded-md">
+          <button className="text-orange-500 py-1 px-3 max-lg:w-full border-2 border-orange-500 rounded-md hover:bg-orange-500 hover:text-white">
             VIEW DETAILS
           </button>
         </div>
