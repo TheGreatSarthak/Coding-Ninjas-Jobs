@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="my-2 py-4 px-6 w-full bg-gradient-to-r from-[#092342] from-60% via-[#80666F] to-[#455181] rounded-md text-white">
+    <div className="my-2 py-4 px-6 w-full bg-gradient-to-r from-[#092342] lg:from-60% via-[#80666F] to-[#455181] rounded-md text-white">
       <div className="flex flex-col">
         <div className="flex text-3xl font-semibold my-2">
           Introducing Placement Cell

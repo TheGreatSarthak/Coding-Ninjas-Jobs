@@ -3,15 +3,16 @@ import { SlLocationPin } from "react-icons/sl";
 import { IoBriefcaseOutline } from "react-icons/io5";
 
 const customColors = [
-  { backgroundColor: "#EFEFEF", color: "#333333" },
-  { backgroundColor: "#D4EDDA", color: "#155724" },
-  { backgroundColor: "#FFD700", color: "#000000" },
+  { backgroundColor: "#FFDBEA", color: "#DC87A2" },
+  { backgroundColor: "#E0F3FD", color: "#6AAFC3" },
+  { backgroundColor: "#E3D1FF", color: "#A183EE" },
+  { backgroundColor: "#DDE9FD", color: "#6275A5" },
   // Add more color combinations as needed
 ];
 
 const JobCard = ({ job }) => {
   return (
-    <div className="flex flex-row justify-between shadow-md w-full bg-white mb-6 mt-2 hover:transform hover:scale-105 transition-transform duration-300">
+    <div className="lg:flex lg:flex-row justify-between shadow-md w-full bg-white mb-6 mt-2 hover:transform hover:scale-105 transition-transform duration-300">
       <div className="flex">
         {/* logo */}
         <div className="rounded-full w-20 h-20 border border-gray-300 m-4">
@@ -54,13 +55,16 @@ const JobCard = ({ job }) => {
               {job.salary}
             </div>
           </div>
-          <div className="flex flex-row"></div>
           {/* job skills */}
           <div className="flex flex-row text-sm font-semibold">
-            {job.skills.map((skill) => (
+            {job.skills.map((skill, index) => (
               <div
                 className="rounded-sm mr-2 px-2 py-1 my-4"
-                // style={customColors[index % customColors.length]}
+                style={{
+                  backgroundColor:
+                    customColors[index % customColors.length].backgroundColor,
+                  color: customColors[index % customColors.length].color,
+                }}
               >
                 {skill}
               </div>
@@ -69,10 +73,12 @@ const JobCard = ({ job }) => {
         </div>
       </div>
       {/* date and button */}
-      <div className="flex flex-col justify-between my-4 mx-4 text-gray-600 text-sm">
-        <div>Application Deadline - {job.application_deadline}</div>
-        <div className="flex justify-end">
-          <button className="text-orange-500 py-1 px-3 border-2 border-orange-500 rounded-md">
+      <div className="lg:flex lg:flex-col lg:justify-between my-4 mx-4 text-gray-600 text-sm">
+        <div className="max-lg:hidden">
+          Application Deadline - {job.application_deadline}
+        </div>
+        <div className="flex lg:justify-end max-lg:w-full">
+          <button className="text-orange-500 py-1 px-3 max-lg:w-full border-2 border-orange-500 rounded-md">
             VIEW DETAILS
           </button>
         </div>

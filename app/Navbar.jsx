@@ -27,8 +27,9 @@ const Navbar = () => {
           </div>
           <div className="font-bold ml-2">Classroom</div>
         </div>
+        {/* navbar left toggles */}
         <div
-          className={`flex items-center px-4 pt-4 pb-3 cursor-pointer ${
+          className={`flex items-center px-4 pt-4 pb-3 cursor-pointer max-lg:hidden ${
             clicked === "placement"
               ? "border-b-4 border-black"
               : "hover:border-gray-200 border-b-4 border-transparent"
@@ -41,7 +42,7 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`flex items-center px-4 pt-4 pb-3 cursor-pointer ${
+          className={`flex items-center px-4 pt-4 pb-3 cursor-pointer max-lg:hidden ${
             clicked === "studio"
               ? "border-b-4 border-black"
               : "hover:border-gray-200 border-b-4 border-transparent"
@@ -56,10 +57,10 @@ const Navbar = () => {
       </div>
       {/* navbar right icons */}
       <div className="flex items-center">
-        <div className="p-1 mx-1 cursor-pointer hover:bg-gray-200 rounded-full">
+        <div className="p-1 mx-1 cursor-pointer hover:bg-gray-200 rounded-full max-lg:hidden">
           <BiHelpCircle size={24} />
         </div>
-        <div className="p-1 mx-1 cursor-pointer hover:bg-gray-200 rounded-full">
+        <div className="p-1 mx-1 cursor-pointer hover:bg-gray-200 rounded-full max-lg:hidden">
           <TbMessage size={24} />
         </div>
         <div className="relative p-1 mx-1 cursor-pointer hover:bg-gray-200 rounded-full">

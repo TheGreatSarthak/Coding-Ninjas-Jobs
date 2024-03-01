@@ -11,40 +11,34 @@ export default function Home() {
   const toggleClick = (value) => {
     setClicked(value);
   };
+
+  const filterItems = [
+    { value: "All Jobs", label: "All Jobs" },
+    { value: "TAships", label: "Coding Ninjas TAships" },
+    { value: "Eligible", label: "Eligible" },
+    { value: "Applied", label: "Applied" },
+  ];
+
   return (
     <div className="pt-16 flex flex-col items-center">
-      <div className="flex flex-col w-[1024px]">
+      <div className="flex flex-col w-[1024px] max-lg:w-[512px]">
         {/* banner */}
         <div className="flex w-full">
           <Banner />
         </div>
-        {/* filters and button */}
+        {/* filters */}
         <div className="flex w-full flex-row my-2 border-b border-gray-300">
-          <div className="flex">
-            <div className="flex" onClick={() => toggleClick("All Jobs")}>
-              <Filter
-                value={"All Jobs"}
-                isClicked={clicked === "All Jobs" ? true : false}
-              />
-            </div>
-            <div className="flex" onClick={() => toggleClick("TAships")}>
-              <Filter
-                value={"Coding Ninjas TAships"}
-                isClicked={clicked === "TAships" ? true : false}
-              />
-            </div>
-            <div className="flex" onClick={() => toggleClick("Eligible")}>
-              <Filter
-                value={"Eligible"}
-                isClicked={clicked === "Eligible" ? true : false}
-              />
-            </div>
-            <div className="flex" onClick={() => toggleClick("Applied")}>
-              <Filter
-                value={"Applied"}
-                isClicked={clicked === "Applied" ? true : false}
-              />
-            </div>
+          {/* filters carousel */}
+          <div className="w-full flex max-lg:overflow-x-scroll">
+            {filterItems.map((item) => (
+              <div
+                key={item.value}
+                className=""
+                onClick={() => toggleClick(item.value)}
+              >
+                <Filter value={item.label} isClicked={clicked === item.value} />
+              </div>
+            ))}
           </div>
         </div>
         {/* filter button */}
