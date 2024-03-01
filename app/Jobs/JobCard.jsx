@@ -15,7 +15,7 @@ const JobCard = ({ job }) => {
     <div className="lg:flex lg:flex-row justify-between shadow-md w-full bg-white mb-6 mt-2 hover:transform hover:scale-105 transition-transform duration-300">
       <div className="flex">
         {/* logo */}
-        <div className="rounded-full w-20 h-20 border border-gray-300 m-4">
+        <div className="rounded-full w-20 h-20 border border-gray-300 m-4  max-[500px]:mr-2">
           <img
             src={job.image_link}
             alt="company-logo"
@@ -23,7 +23,7 @@ const JobCard = ({ job }) => {
           />
         </div>
         {/* job details */}
-        <div className="flex flex-col my-4 mx-2">
+        <div className="flex flex-col my-4 mx-2  max-[500px]:mr-1">
           <div className="flex flex-row items-center">
             <div className="text-gray-900 font-semibold max-[500px]:text-sm">
               {job.title}
@@ -31,7 +31,7 @@ const JobCard = ({ job }) => {
             <div
               className={`text-xs max-[500px]:text-[8px] text-white ${
                 job.eligibility === "Eligible" ? "bg-blue-900" : "bg-red-500"
-              }  rounded-sm py-1 px-2 mx-3`}
+              }  rounded-sm py-1 px-2 mx-3  max-[500px]:mx-2`}
             >
               {job.eligibility}
             </div>

@@ -5,11 +5,11 @@ const Banner = () => {
         <div className="flex text-3xl max-[500px]:text-2xl font-semibold my-2">
           Introducing Placement Cell
         </div>
-        <div className="flex flex-row items-center my-1">
-          <div className="flex font-semibold text-lg max-[500px]:text-base">
+        <div className="flex flex-row max-[500px]:flex-col items-center  max-[500px]:items-start my-1">
+          <div className="flex font-semibold text-lg  max-[500px]:mb-2">
             by Coding Ninjas
           </div>
-          <div className="flex bg-blue-600 font-medium p-1 mx-6 max-[500px]:text-xs">
+          <div className="flex bg-blue-600 font-medium p-1 mx-6  max-[500px]:mx-0">
             You are eligible for 14 new jobs
           </div>
         </div>

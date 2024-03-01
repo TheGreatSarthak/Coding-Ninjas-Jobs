@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="pt-16 flex flex-col items-center">
-      <div className="flex flex-col w-[1024px] max-lg:w-[512px] max-[500px]:w-[420px]">
+      <div className="flex flex-col w-[1024px] max-lg:w-[512px] max-[500px]:w-[400px]">
         {/* banner */}
         <div className="flex w-full">
           <Banner />
