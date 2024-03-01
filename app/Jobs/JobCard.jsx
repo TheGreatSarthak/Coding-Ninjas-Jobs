@@ -25,13 +25,13 @@ const JobCard = ({ job }) => {
         {/* job details */}
         <div className="flex flex-col my-4 mx-2  max-[500px]:mr-1">
           <div className="flex flex-row items-center">
-            <div className="text-gray-900 font-semibold max-[500px]:text-sm">
+            <div className="text-gray-900 font-semibold max-[500px]:text-sm overflow-ellipsis whitespace-nowrap">
               {job.title}
             </div>
             <div
               className={`text-xs max-[500px]:text-[8px] text-white ${
                 job.eligibility === "Eligible" ? "bg-blue-900" : "bg-red-500"
-              }  rounded-sm py-1 px-2 mx-3  max-[500px]:mx-2`}
+              }  rounded-sm py-1 px-2 mx-3  max-[500px]:mx-2 whitespace-nowrap`}
             >
               {job.eligibility}
             </div>
